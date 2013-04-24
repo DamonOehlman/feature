@@ -10,6 +10,7 @@
   "dependencies": {
   },
   "devDependencies": {
+    "tape": "0.3.x"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "bugs": {
     "url": "http://github.com/DamonOehlman/feature/issues"
+  },
+
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [ "ie/9", "ie/10", "chrome/latest", "firefox/latest", "safari/latest", "opera/latest"]
   },
 
   "contributors": []
