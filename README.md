@@ -1,5 +1,7 @@
 # feature
 
+[![browser support](https://ci.testling.com/DamonOehlman/feature.png)](https://ci.testling.com/DamonOehlman/feature)
+
 Feature-detection at a highly targeted level. 
 
 ## Example Usage
