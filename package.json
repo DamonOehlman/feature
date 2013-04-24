@@ -1,0 +1,23 @@
+{
+  "name": "feature",
+  "description": "Granular Feature Detection for Browsers",
+  "tags": [
+    "feature detection",
+    "browser"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/DamonOehlman/feature.git"
+  },
+  "bugs": {
+    "url": "http://github.com/DamonOehlman/feature/issues"
+  },
+
+  "contributors": []
+}
