@@ -8,6 +8,7 @@
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.0.0",
   "dependencies": {
+    "crel": "git://github.com/KoryNunn/crel.git"
   },
   "devDependencies": {
     "tape": "0.3.x"
