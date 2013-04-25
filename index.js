@@ -1,10 +1,19 @@
-var prefixes = ['', 'ms', 'O', 'Moz', 'Webkit'],
+// list prefixes and case transforms (reverse order as a decrementing for loop is used)
+var prefixes = [
+        'ms',
+        'ms', // 2nd entry for ms as we will also try Pascal case for MS
+        'O',
+        'Moz',
+        'Webkit',
+        ''
+    ],
     caseTransforms = [
         toCamelCase,
-        toCamelCase,
+        null,
         null,
         toCamelCase,
-        null
+        null,
+        toCamelCase
     ],
     props = {},
     style;
