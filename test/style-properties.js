@@ -1,15 +1,16 @@
-var feature = require('../'),
+var css = require('../').css,
     test = require('tape'),
     props = [
         'transform',
-        'box-shadow'
+        'box-shadow',
+        'border-radius'
     ];
 
 test('style properties test', function(t) {
     t.plan(props.length * 2);
 
     props.forEach(function(prop) {
-        t.ok(feature(prop), prop + ' property detected ok as expected');
-        t.ok(typeof feature(prop) == 'function', prop + ' has accessor function');
+        t.ok(css(prop), prop + ' property detected ok as expected');
+        t.ok(typeof css(prop) == 'function', prop + ' has accessor function');
     });
 });

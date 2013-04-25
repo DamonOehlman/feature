@@ -1,1 +1,1 @@
-module.exports = require('./')('transform');
+module.exports = require('./').css('transform');
