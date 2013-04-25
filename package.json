@@ -6,7 +6,7 @@
     "browser"
   ],
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "crel": "git://github.com/KoryNunn/crel.git"
   },
@@ -20,11 +20,16 @@
   "bugs": {
     "url": "http://github.com/DamonOehlman/feature/issues"
   },
-
   "testling": {
     "files": "test/*.js",
-    "browsers": [ "ie/9", "ie/10", "chrome/latest", "firefox/latest", "safari/latest", "opera/latest"]
+    "browsers": [
+      "ie/9",
+      "ie/10",
+      "chrome/latest",
+      "firefox/latest",
+      "safari/latest",
+      "opera/latest"
+    ]
   },
-
   "contributors": []
 }
