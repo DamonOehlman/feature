@@ -1,4 +1,11 @@
-var prefixes = ['ms', 'O', 'Moz', 'Webkit'],
+var prefixes = ['', 'ms', 'O', 'Moz', 'Webkit'],
+    caseTransforms = [
+        toCamelCase,
+        toCamelCase,
+        null,
+        toCamelCase,
+        null
+    ],
     props = {},
     style;
 
@@ -11,6 +18,10 @@ function createGetterSetter(propName) {
 
         return getComputedStyle(element, propName);
     };
+}
+
+function toCamelCase(input) {
+    return input.charAt(0).toLowerCase() + input.slice(1);
 }
 
 module.exports = function(prop) {
@@ -30,7 +41,7 @@ module.exports = function(prop) {
 
     // check for the property
     for (ii = prefixes.length; ii--; ) {
-        propName = prefixes[ii] + pascalCaseName;
+        propName = prefixes[ii] + (caseTransforms[ii] ? caseTransforms[ii](pascalCaseName) : pascalCaseName);
 
         if (typeof style[propName] != 'undefined') {
             props[prop] = createGetterSetter(propName);
