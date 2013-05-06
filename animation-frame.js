@@ -5,5 +5,5 @@ module.exports = function() {
         window.requestAnimationFrame = window[browserPrefixes[ii] + 'RequestAnimationFrame'];
     }
 
-    return window.requestAnimationFrame;
+    return typeof window.requestAnimationFrame != 'undefined';
 };
