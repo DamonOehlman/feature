@@ -7,11 +7,9 @@
   ],
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.0.5",
-  "dependencies": {
-    "crel": "1.0.x"
-  },
   "devDependencies": {
-    "tape": "0.3.x"
+    "tape": "~1.0.4",
+    "jshint": "~2.1.4"
   },
   "repository": {
     "type": "git",
@@ -19,6 +17,9 @@
   },
   "bugs": {
     "url": "http://github.com/DamonOehlman/feature/issues"
+  },
+  "scripts": {
+    "lint": "$(npm bin)/jshint *.js"
   },
   "testling": {
     "files": "test/*.js",

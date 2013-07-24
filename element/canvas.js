@@ -1,4 +1,9 @@
-var crel = require('crel'),
-    el = crel('canvas');
+/* jshint node: true */
 
-module.exports = el && (!! (el.getContext && el.getContext('2d'))) && crel.bind(null, 'canvas');
+'use strict';
+
+var el = document.createElement('canvas');
+
+module.exports = el &&
+  (!! (el.getContext && el.getContext('2d'))) &&
+  document.createElement('canvas');
