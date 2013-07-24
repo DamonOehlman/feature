@@ -1,11 +1,9 @@
-var raf = require('../animation-frame'),
-    test = require('tape');
+var raf = require('../animation-frame');
+var test = require('tape');
 
 test('requestAnimationFrame support test', function(t) {
-    if (raf) {
-        t.plan(1);
-        requestAnimationFrame(function() {
-            t.pass('requestAnimationFrame successfully called');
-        });
-    }
+  t.plan(1);
+  raf(function() {
+    t.pass('requestAnimationFrame successfully called');
+  });
 });

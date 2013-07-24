@@ -22,7 +22,7 @@
     "lint": "$(npm bin)/jshint *.js && $(npm bin)/jshint element/*.js"
   },
   "testling": {
-    "files": "test/*.js",
+    "files": "test/all.js",
     "browsers": [
       "ie/9",
       "ie/10",

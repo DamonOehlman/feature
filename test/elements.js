@@ -1,8 +1,7 @@
-var canvas = require('../element/canvas'),
-    test = require('tape');
+var canvas = require('../element/canvas');
+var test = require('tape');
 
 test('element support test', function(t) {
-    t.plan(1);
-
-    t.ok(canvas, 'Browser supports canvas');
+  t.plan(1);
+  t.ok(canvas, 'Browser supports canvas');
 });
