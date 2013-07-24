@@ -19,7 +19,7 @@
     "url": "http://github.com/DamonOehlman/feature/issues"
   },
   "scripts": {
-    "lint": "$(npm bin)/jshint *.js"
+    "lint": "$(npm bin)/jshint *.js && $(npm bin)/jshint element/*.js"
   },
   "testling": {
     "files": "test/*.js",

@@ -1,9 +1,4 @@
-var browserPrefixes = ['ms', 'o', 'moz', 'webkit'];
+/* jshint node: true */
+'use strict';
 
-module.exports = function() {
-    for (var ii = browserPrefixes.length; (! window.requestAnimationFrame) && ii--; ) {
-        window.requestAnimationFrame = window[browserPrefixes[ii] + 'RequestAnimationFrame'];
-    }
-
-    return typeof window.requestAnimationFrame != 'undefined';
-};
+module.exports = require('./detect')('RequestAnimationFrame');

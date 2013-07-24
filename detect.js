@@ -6,6 +6,7 @@ module.exports = function(target, prefixes) {
   var prefixIdx;
   var prefix;
   var testName;
+  var scope = this || window;
 
   // initialise to default prefixes
   // (reverse order as we use a decrementing for loop)
@@ -20,11 +21,11 @@ module.exports = function(target, prefixes) {
     // such that a test for getUserMedia would result in a search for 
     // webkitGetUserMedia
     testName = prefix + (prefix ?
-                            target.charAt(0).toUpperCase() + target.slice(1) :
-                            target);
+      target.charAt(0).toUpperCase() + target.slice(1) :
+      target);
 
-    if (typeof this[testName] == 'function') {
-      return this[testName];
+    if (typeof scope[testName] == 'function') {
+      return scope[testName];
     }
   }
 };
