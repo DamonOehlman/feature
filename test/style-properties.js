@@ -1,4 +1,4 @@
-var css = require('../').css;
+var css = require('../css');
 var test = require('tape');
 var props = [
   'transform',
