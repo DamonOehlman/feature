@@ -62,10 +62,21 @@ don't exist, that is left to you to implement yourself.
 
 ## fullscreen
 
+If the [Fullscreen API](http://caniuse.com/#feat=fullscreen) is available
+this will allow you to fullscreen either the document or a target element.
+
 ```js
 var fullscreen = require('feature/fullscreen');
 
 if (fullscreen) {
   fullscreen(); // you can pass an element to fullscreen here
 }
+
+Additionally, the function can be passed directly to an event handler and 
+the function will adjust :)
+
+```js
+var fullscreen = require('feature/fullscreen');
+
+document.getElementById('makeMeFS').addEventListener('click', fullscreen);
 ```
