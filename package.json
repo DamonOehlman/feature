@@ -8,9 +8,7 @@
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.1.0",
   "devDependencies": {
-    "tape": "~1.0.4",
-    "jshint": "~2.1.4",
-    "emu": "0.0.2"
+    "tape": "~1.1.0"
   },
   "repository": {
     "type": "git",
@@ -20,8 +18,8 @@
     "url": "http://github.com/DamonOehlman/feature/issues"
   },
   "scripts": {
-    "gendocs": "cat index.js detect.js | emu > README.md",
-    "lint": "$(npm bin)/jshint *.js && $(npm bin)/jshint element/*.js"
+    "gendocs": "gendocs > README.md",
+    "lint": "jshint *.js && jshint element/*.js"
   },
   "testling": {
     "files": "test/all.js",

@@ -34,6 +34,11 @@ The work in feature would not be possible without the excellent work
 painstakingly completed by the [Modernizr](https://github.com/Modernizr)
 team.
 
+## css(prop)
+
+Test for the prescence of the specified CSS property (in all it's 
+possible browser prefixed variants)
+
 ## detect
 
 The core functionality of the feature module is powered by the `detect`
@@ -54,3 +59,13 @@ If it does then `raf` will be a function that is equivalent to the browser
 prefixed requestAnimationFrame function (e.g. webkitRequestAnimationFrame).
 It should be noted that feature does nothing to try and polyfill things that
 don't exist, that is left to you to implement yourself.
+
+## fullscreen
+
+```js
+var fullscreen = require('feature/fullscreen');
+
+if (fullscreen) {
+  fullscreen(); // you can pass an element to fullscreen here
+}
+```
