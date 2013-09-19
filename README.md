@@ -71,6 +71,7 @@ var fullscreen = require('feature/fullscreen');
 if (fullscreen) {
   fullscreen(); // you can pass an element to fullscreen here
 }
+```
 
 Additionally, the function can be passed directly to an event handler and 
 the function will adjust :)
