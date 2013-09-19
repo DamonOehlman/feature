@@ -11,9 +11,10 @@ Feature-detection at a highly targeted level.
 
 ## What about Modernizr?
 
-Modernizr is wonderful, no doubt about it.  It is however, pretty massive
-and while it can be whittled down to a smaller size using customization
-from the download page, I'm just a bit too lazy for that.  I would prefer
+[Modernizr](https://github.com/Modernizr) is wonderful, no doubt about it.
+It is however, pretty massive and while it can be whittled down to a smaller
+size using customization from the download page, I'm just a bit too lazy 
+for that.  I would prefer
 to specify the feature detection I need in code using require statements
 (e.g. `require('feature/fullscreen')`) and have only the code required to
 detect that feature included.
@@ -41,12 +42,6 @@ Because of Browserify's excellent static analysis (powered by
 [esprima](https://github.com/ariya/esprima)), when `feature` is 
 used within an application in this way, only the targeted feature 
 detection is included in the resultant JS file.
-
-## Standing on the Shoulders of Giants
-
-The work in feature would not be possible without the excellent work 
-painstakingly completed by the [Modernizr](https://github.com/Modernizr)
-team.
 
 ## css(prop)
 
