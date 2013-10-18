@@ -74,7 +74,7 @@ function createGetterSetter(propName) {
       element.style[propName] = value;
     }
 
-    return window.getComputedStyle(element, propName);
+    return window.getComputedStyle(element)[propName];
   };
 }
 
