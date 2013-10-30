@@ -29,7 +29,7 @@ var style;
 /**
 ## css(prop)
 
-Test for the prescence of the specified CSS property (in all it's 
+Test for the prescence of the specified CSS property (in all it's
 possible browser prefixed variants)
 **/
 module.exports = function(prop) {
@@ -44,7 +44,7 @@ module.exports = function(prop) {
     return props[prop];
   }
 
-  // convert a dash delimited propertyname (e.g. box-shadow) into 
+  // convert a dash delimited propertyname (e.g. box-shadow) into
   // pascal cased name (e.g. BoxShadow)
   pascalCaseName = prop.split('-').reduce(function(memo, val) {
     return memo + val.charAt(0).toUpperCase() + val.slice(1);
@@ -61,7 +61,7 @@ module.exports = function(prop) {
       break;
     }
   }
-  
+
   return props[prop];
 };
 
