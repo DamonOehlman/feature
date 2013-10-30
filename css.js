@@ -27,10 +27,17 @@ var props = {};
 var style;
 
 /**
-## css(prop)
+  ## css(prop)
 
-Test for the prescence of the specified CSS property (in all it's
-possible browser prefixed variants)
+  Test for the prescence of the specified CSS property (in all it's
+  possible browser prefixed variants).  The returned function (if we
+  are able to access the required style property) is both a getter and
+  setter function for when given an element.
+
+  Consider the following example, with regards to CSS transforms:
+
+  <<< examples/transform.js
+
 **/
 module.exports = function(prop) {
   var ii;
@@ -69,7 +76,7 @@ module.exports = function(prop) {
 
 function createGetterSetter(propName) {
   return function(element, value) {
-    // if we have a value update 
+    // if we have a value update
     if (typeof value != 'undefined') {
       element.style[propName] = value;
     }
