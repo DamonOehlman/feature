@@ -3,26 +3,25 @@
 'use strict';
 
 /**
-## detect
+  ### detect
 
-The core functionality of the feature module is powered by the `detect`
-function, which can be imported like so:
+  The core functionality of the feature module is powered by the `detect`
+  function, which can be imported like so:
 
-```js
-var detect = require('feature/detect');
-```
+  ```js
+  var detect = require('feature/detect');
+  ```
 
-Once you have the detect function available you can do nifty things like
-detect whether your browser supports `requestAnimationFrame`:
+  Once you have the detect function available you can do nifty things like
+  detect whether your browser supports `requestAnimationFrame`:
 
-```js
-var raf = detect('requestAnimationFrame');
-```
+  <<< examples/raf.js
 
-If it does then `raf` will be a function that is equivalent to the browser
-prefixed requestAnimationFrame function (e.g. webkitRequestAnimationFrame).
-It should be noted that feature does nothing to try and polyfill things that
-don't exist, that is left to you to implement yourself.
+  If it does then `raf` will be a function that is equivalent to the browser
+  prefixed requestAnimationFrame function (e.g. webkitRequestAnimationFrame).
+  It should be noted that feature does nothing to try and polyfill things that
+  don't exist, that is left to you to implement yourself.
+
 **/
 module.exports = function(target, prefixes) {
   var prefixIdx;
