@@ -45,8 +45,30 @@ detection is included in the resultant JS file.
 
 ## css(prop)
 
-Test for the prescence of the specified CSS property (in all it's 
-possible browser prefixed variants)
+Test for the prescence of the specified CSS property (in all it's
+possible browser prefixed variants).  The returned function (if we
+are able to access the required style property) is both a getter and
+setter function for when given an element.
+
+Consider the following example, with regards to CSS transforms:
+
+```js
+var crel = require('crel');
+var transform = require('feature/css')('transform');
+var el = crel('div', 'test');
+
+// if we have transforms available, then apply one
+if (transform) {
+  transform(el, 'translate(500px, 100px)');
+}
+
+// add the test div to the document
+document.body.appendChild(el);
+
+// log out the el position
+console.log(el.getBoundingClientRect().left);
+// ~~> 508
+```
 
 ## detect
 
@@ -82,7 +104,7 @@ if (fullscreen) {
 }
 ```
 
-Additionally, the function can be passed directly to an event handler and 
+Additionally, the function can be passed directly to an event handler and
 the function will adjust :)
 
 ```js
