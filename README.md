@@ -33,7 +33,9 @@ code from feature would be included in my application.  All the rest of the
 module would simply be ignored.  So that's why. It's purely selfish, and
 well you should feel free to keep on using Modernizr.
 
-## css(prop)
+## Reference
+
+### css(prop)
 
 Test for the prescence of the specified CSS property (in all it's
 possible browser prefixed variants).  The returned function (if we
@@ -60,7 +62,7 @@ console.log(el.getBoundingClientRect().left);
 // ~~> 508
 ```
 
-## detect
+### detect
 
 The core functionality of the feature module is powered by the `detect`
 function, which can be imported like so:
@@ -73,7 +75,20 @@ Once you have the detect function available you can do nifty things like
 detect whether your browser supports `requestAnimationFrame`:
 
 ```js
-var raf = detect('requestAnimationFrame');
+var raf = require('feature/detect')('requestAnimationFrame');
+
+function logRandom() {
+  console.log(Math.random());
+  raf(logRandom);
+}
+
+// create a requestAnimationFrame fallback
+raf = raf || function(fn) {
+  setTimeout(fn, 1000 / 60);
+};
+
+// start logging random numbers (for some reason...)
+logRandom();
 ```
 
 If it does then `raf` will be a function that is equivalent to the browser
@@ -81,7 +96,7 @@ prefixed requestAnimationFrame function (e.g. webkitRequestAnimationFrame).
 It should be noted that feature does nothing to try and polyfill things that
 don't exist, that is left to you to implement yourself.
 
-## fullscreen
+### fullscreen
 
 If the [Fullscreen API](http://caniuse.com/#feat=fullscreen) is available
 this will allow you to fullscreen either the document or a target element.
@@ -90,15 +105,23 @@ this will allow you to fullscreen either the document or a target element.
 var fullscreen = require('feature/fullscreen');
 
 if (fullscreen) {
-  fullscreen(); // you can pass an element to fullscreen here
+  fullscreen();
 }
 ```
 
 Additionally, the function can be passed directly to an event handler and
-the function will adjust :)
+the function will fullscreen just the selected element.  This is useful
+in the case of videos, images, etc.
 
 ```js
+var crel = require('crel');
 var fullscreen = require('feature/fullscreen');
+var img = crel('img', {
+  src: 'http://upload.wikimedia.org/wikipedia/commons/d/d3/Jim_jim_falls.jpg',
+});
 
-document.getElementById('makeMeFS').addEventListener('click', fullscreen);
+img.addEventListener('click', fullscreen);
+
+document.body.appendChild(img);
+
 ```
