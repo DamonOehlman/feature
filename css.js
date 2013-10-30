@@ -27,7 +27,7 @@ var props = {};
 var style;
 
 /**
-  ## css(prop)
+  ### css(prop)
 
   Test for the prescence of the specified CSS property (in all it's
   possible browser prefixed variants).  The returned function (if we

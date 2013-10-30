@@ -31,6 +31,8 @@
   module would simply be ignored.  So that's why. It's purely selfish, and
   well you should feel free to keep on using Modernizr.
 
+  ## Reference
+
 **/
 
 exports.detect = require('./detect');
