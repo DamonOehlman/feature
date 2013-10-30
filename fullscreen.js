@@ -13,27 +13,19 @@ while (variants.length) {
 }
 
 /**
-  ## fullscreen
+  ### fullscreen
 
   If the [Fullscreen API](http://caniuse.com/#feat=fullscreen) is available
   this will allow you to fullscreen either the document or a target element.
 
-  ```js
-  var fullscreen = require('feature/fullscreen');
-
-  if (fullscreen) {
-    fullscreen(); // you can pass an element to fullscreen here
-  }
-  ```
+  <<< examples/fullscreen.js
 
   Additionally, the function can be passed directly to an event handler and
-  the function will adjust :)
+  the function will fullscreen just the selected element.  This is useful
+  in the case of videos, images, etc.
 
-  ```js
-  var fullscreen = require('feature/fullscreen');
+  <<< examples/fullscreen-onclick.js
 
-  document.getElementById('makeMeFS').addEventListener('click', fullscreen);
-  ```
 **/
 module.exports = fullscreenFn && function(target) {
   // if this has been called in response to a browser event
