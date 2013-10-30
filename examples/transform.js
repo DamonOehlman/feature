@@ -1,5 +1,5 @@
-var crel = require('crel');
 var transform = require('../css')('transform');
+var crel = require('crel');
 var el = crel('div', 'test');
 
 // if we have transforms available, then apply one

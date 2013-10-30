@@ -45,8 +45,8 @@ setter function for when given an element.
 Consider the following example, with regards to CSS transforms:
 
 ```js
-var crel = require('crel');
 var transform = require('feature/css')('transform');
+var crel = require('crel');
 var el = crel('div', 'test');
 
 // if we have transforms available, then apply one
@@ -114,8 +114,8 @@ the function will fullscreen just the selected element.  This is useful
 in the case of videos, images, etc.
 
 ```js
-var crel = require('crel');
 var fullscreen = require('feature/fullscreen');
+var crel = require('crel');
 var img = crel('img', {
   src: 'http://upload.wikimedia.org/wikipedia/commons/d/d3/Jim_jim_falls.jpg',
 });
