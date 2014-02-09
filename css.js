@@ -75,14 +75,18 @@ module.exports = function(prop) {
 /* internal helper functions */
 
 function createGetterSetter(propName) {
-  return function(element, value) {
+  function gs(element, value) {
     // if we have a value update
     if (typeof value != 'undefined') {
       element.style[propName] = value;
     }
 
     return window.getComputedStyle(element)[propName];
-  };
+  }
+
+  // attach the property name to the getter and setter
+  gs.property = propName;
+  return gs;
 }
 
 function toCamelCase(input) {
