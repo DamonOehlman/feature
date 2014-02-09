@@ -6,7 +6,7 @@
     "browser"
   ],
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "devDependencies": {
     "tape": "~2.4.2",
     "crel": "~1.1.0"
