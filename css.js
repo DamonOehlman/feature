@@ -1,8 +1,3 @@
-/* jshint node: true */
-/* global window: false */
-/* global document: false */
-'use strict';
-
 // list prefixes and case transforms
 // (reverse order as a decrementing for loop is used)
 var prefixes = [

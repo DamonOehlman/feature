@@ -19,8 +19,7 @@
     "url": "http://github.com/DamonOehlman/feature/issues"
   },
   "scripts": {
-    "gendocs": "gendocs > README.md",
-    "lint": "jshint *.js && jshint element/*.js"
+    "gendocs": "gendocs > README.md"
   },
   "testling": {
     "files": "test/all.js",

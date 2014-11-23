@@ -1,7 +1,3 @@
-/* jshint node: true */
-
-'use strict';
-
 /**
   ### detect
 
@@ -39,7 +35,7 @@ module.exports = function(target, prefixes) {
 
     // construct the test class name
     // if we have a prefix ensure the target has an uppercase first character
-    // such that a test for getUserMedia would result in a search for 
+    // such that a test for getUserMedia would result in a search for
     // webkitGetUserMedia
     testName = prefix + (prefix ?
       target.charAt(0).toUpperCase() + target.slice(1) :

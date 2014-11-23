@@ -1,6 +1,3 @@
-/* jshint node: true */
-/* global Event: false */
-
 var detect = require('./detect');
 var variants = ['Fullscreen', 'FullScreen'];
 var fullscreenFn;

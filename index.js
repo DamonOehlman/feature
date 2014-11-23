@@ -1,7 +1,3 @@
-/* jshint node: true */
-
-'use strict';
-
 /**
   # feature
 
