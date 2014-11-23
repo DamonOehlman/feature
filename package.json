@@ -7,7 +7,7 @@
   ],
   "stability": "unstable",
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "devDependencies": {
     "crel": "^2.1.5",
     "tape": "^3.0.3"
