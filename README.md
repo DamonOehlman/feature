@@ -8,7 +8,7 @@ Feature-detection at a highly targeted level.
 
 [![browser support](https://ci.testling.com/DamonOehlman/feature.png)](https://ci.testling.com/DamonOehlman/feature)
 
-
+[![unstable](https://img.shields.io/badge/stability-unstable-yellowgreen.svg)](https://github.com/dominictarr/stability#unstable) 
 
 ## What about Modernizr?
 
