@@ -8,7 +8,7 @@
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.1.4",
   "devDependencies": {
-    "crel": "~1.1.0",
+    "crel": "^2.1.5",
     "tape": "^3.0.3"
   },
   "repository": {
