@@ -5,6 +5,7 @@
     "feature detection",
     "browser"
   ],
+  "stability": "unstable",
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.1.4",
   "devDependencies": {
