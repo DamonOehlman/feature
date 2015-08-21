@@ -41,7 +41,7 @@ module.exports = function(target, prefixes) {
       target.charAt(0).toUpperCase() + target.slice(1) :
       target);
 
-    if (typeof scope[testName] == 'function') {
+    if (scope[testName]) {
       return scope[testName];
     }
   }
