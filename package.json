@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/DamonOehlman/feature.git"
+    "url": "git+ssh://git@github.com/DamonOehlman/feature.git"
   },
   "bugs": {
     "url": "http://github.com/DamonOehlman/feature/issues"
@@ -33,5 +33,13 @@
       "opera/latest"
     ]
   },
-  "contributors": []
+  "contributors": [],
+  "homepage": "https://github.com/DamonOehlman/feature#readme",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {},
+  "license": "ISC"
 }
