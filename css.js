@@ -21,20 +21,7 @@ var caseTransforms = [
 var props = {};
 var style;
 
-/**
-  ### css(prop)
-
-  Test for the prescence of the specified CSS property (in all it's
-  possible browser prefixed variants).  The returned function (if we
-  are able to access the required style property) is both a getter and
-  setter function for when given an element.
-
-  Consider the following example, with regards to CSS transforms:
-
-  <<< examples/transform.js
-
-**/
-module.exports = function(prop) {
+module.exports = function (prop) {
   var ii;
   var propName;
   var pascalCaseName;
@@ -48,15 +35,15 @@ module.exports = function(prop) {
 
   // convert a dash delimited propertyname (e.g. box-shadow) into
   // pascal cased name (e.g. BoxShadow)
-  pascalCaseName = prop.split('-').reduce(function(memo, val) {
+  pascalCaseName = prop.split('-').reduce(function (memo, val) {
     return memo + val.charAt(0).toUpperCase() + val.slice(1);
   }, '');
 
   // check for the property
-  for (ii = prefixes.length; ii--; ) {
+  for (ii = prefixes.length; ii--;) {
     propName = prefixes[ii] + (caseTransforms[ii] ?
-                  caseTransforms[ii](pascalCaseName) :
-                  pascalCaseName);
+      caseTransforms[ii](pascalCaseName) :
+      pascalCaseName);
 
     if (typeof style[propName] != 'undefined') {
       props[prop] = createGetterSetter(propName);

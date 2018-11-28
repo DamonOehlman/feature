@@ -2,13 +2,9 @@
 
 Feature-detection at a highly targeted level.
 
-
 [![NPM](https://nodei.co/npm/feature.png)](https://nodei.co/npm/feature/)
 
-
-[![browser support](https://ci.testling.com/DamonOehlman/feature.png)](https://ci.testling.com/DamonOehlman/feature)
-
-[![unstable](https://img.shields.io/badge/stability-unstable-yellowgreen.svg)](https://github.com/dominictarr/stability#unstable) [![bitHound Score](https://www.bithound.io/github/DamonOehlman/feature/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/feature) 
+[![stable](https://img.shields.io/badge/stability-stable-green.svg)](https://github.com/dominictarr/stability#stable)
 
 ## What about Modernizr?
 
@@ -124,7 +120,6 @@ var img = crel('img', {
 img.addEventListener('click', fullscreen);
 
 document.body.appendChild(img);
-
 ```
 
 ## License(s)
@@ -144,3 +139,4 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
+
